@@ -105,6 +105,8 @@ These couple of lines are all we need to do to use `Pos2D` in Storage. It's wort
 
 Here's an example of a contract showing the whole code, together with a simple test:
 
+(Note: this code won't compile with the 1.0.0-alpha.6 release. Use the commit [`bc1ebcb8`](https://github.com/starkware-libs/cairo/commit/bc1ebcb8236603baa2b1f25bb04148a00aac0984) that introduced Serde derive or any other later commit to compile.)
+
 ```rust
 use starknet::StorageAccess;
 use starknet::StorageBaseAddress;
