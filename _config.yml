@@ -84,7 +84,7 @@ avatar: ./assets/img/caironaut.png
 # boolean type, the global switch for TOC in posts.
 toc: false
 
-incremental: true
+# incremental: true
 
 comments:
   active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
