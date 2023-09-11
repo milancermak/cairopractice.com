@@ -36,7 +36,7 @@ Say we have a `Pos3` type representing a position in 3D space using three `u64` 
 It could look something like this:
 
 ```rust
-#[derive(Copy, Drop, Serde, starknet::Store)]
+#[derive(Copy, Drop, Serde)]
 struct Pos3 {
     x: u64,
     y: u64,
@@ -46,7 +46,7 @@ struct Pos3 {
 const SHIFT: felt252 = 0x10000000000000000; // 2**64
 
 impl PackPos3 of starknet::StorePacking<Pos3, felt252> {
-    fn pack(value: Pos3D) -> felt252 {
+    fn pack(value: Pos3) -> felt252 {
         (value.x.into() +
          value.y.into() * SHIFT +
          value.z.into() * SHIFT * SHIFT)
@@ -85,6 +85,6 @@ mod game {
 
 ```
 
-Notice the **only** thing we had to do is implement `StorePacking<Pos3, felt252>`. The rest of this contrieved example would still be the same regardless if there's an implementation of the packing trait or not.
+Notice the **only** thing we had to do is implement `StorePacking<Pos3, felt252>`. Since we're packing into a `felt252` which has an impl of `Store` in corelib, the rest will work seamlessly.
 
 Yet another wonderful example of the power of Cairo. Go pack those bits!
