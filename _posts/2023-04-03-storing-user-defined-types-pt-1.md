@@ -5,6 +5,8 @@ author: m
 tags: [starknet, cairo]
 ---
 
+*Deprecation notice: Since this post was published, Starknet and Cairo have evolved. As such, parts of the post might be obsolete. For the best, most up-to-date resources, please consult the [official Starknet documentation](https://docs.starknet.io/) and the [Cairo book](https://book.cairo-lang.org/).*
+
 When we want to store a custom `struct` in a Starknet contract, we immediatelly run into a problem. Take this simple contract for example:
 
 ```rust

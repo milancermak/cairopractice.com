@@ -5,6 +5,10 @@ author: m
 tags: [starknet, cairo]
 ---
 
+*Deprecation notice: Since this post was published, Starknet and Cairo have evolved. As such, parts of the post might be obsolete. For the best, most up-to-date resources, please consult the [official Starknet documentation](https://docs.starknet.io/) and the [Cairo book](https://book.cairo-lang.org/).*
+
+Please refer
+
 A defining feature of programmable blockchains is the ability to call other contracts. Let's explore how to do this in Starknet using Cairo.
 
 We start by declaring an interface of the called contract by using the `#[abi]` attribute:
@@ -54,7 +58,7 @@ Behold the power of *Cairo plugins* ✨
 
 When the compiler encounters the `#[abi]` attribute, it executes the [dispatcher plugin](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/src/plugin/dispatcher.rs) that generates all the boilerplate code for us. The generated code contains a new trait, two new structs and their implementation of this trait. We didn't have to write anything else besides the initial interface declaration.
 
-To do a regular contract call, we only need to instantiate the `IMintableDispatcher` struct. It takes a `contract_address` value, the address of an external contract which we want to interact with. We can now call any of the interface functions on this struct. Note if we declared `IMintable` in a different scope, we'll need to import it via `use`. 
+To do a regular contract call, we only need to instantiate the `IMintableDispatcher` struct. It takes a `contract_address` value, the address of an external contract which we want to interact with. We can now call any of the interface functions on this struct. Note if we declared `IMintable` in a different scope, we'll need to import it via `use`.
 
 Here's a full example:
 
@@ -62,7 +66,7 @@ Here's a full example:
 #[abi]
 trait IMintable {
     fn mint_to(receiver: starknet::ContractAddress, amount: u128);
-}   
+}
 
 #[contract]
 mod Altruist {

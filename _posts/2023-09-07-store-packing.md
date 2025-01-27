@@ -5,6 +5,8 @@ author: m
 tags: [cairo, starknet]
 ---
 
+*Deprecation notice: Since this post was published, Starknet and Cairo have evolved. As such, parts of the post might be obsolete. For the best, most up-to-date resources, please consult the [official Starknet documentation](https://docs.starknet.io/) and the [Cairo book](https://book.cairo-lang.org/).*
+
 One of my favorite recent additions to Cairo is the [`StorePacking` trait](https://github.com/starkware-libs/cairo/blob/9e5427b9178bb6663c68b46203ea5493296b8e48/corelib/src/starknet/storage_access.cairo#L68):
 
 ```rust

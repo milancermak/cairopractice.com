@@ -5,6 +5,8 @@ author: m
 tags: [starknet, cairo]
 ---
 
+*Deprecation notice: Since this post was published, Starknet and Cairo have evolved. As such, parts of the post might be obsolete. For the best, most up-to-date resources, please consult the [official Starknet documentation](https://docs.starknet.io/) and the [Cairo book](https://book.cairo-lang.org/).*
+
 What happens when types in a [Starknet contract interface]({% post_url 2023-03-28-calling-contracts-using-dispatch %}) do not match the contract we're interfacing with? Let's find out.
 
 We'll [use a simple contract](https://testnet.starkscan.co/contract/0x059a4016a63ea2efb46c94a18b87488cf5fd18925f9fa96af9d236d6c56a6b85#read-write-contract) just to get some data:

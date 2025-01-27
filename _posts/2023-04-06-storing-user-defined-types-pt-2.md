@@ -5,6 +5,8 @@ author: m
 tags: [starknet, cairo]
 ---
 
+*Deprecation notice: Since this post was published, Starknet and Cairo have evolved. As such, parts of the post might be obsolete. For the best, most up-to-date resources, please consult the [official Starknet documentation](https://docs.starknet.io/) and the [Cairo book](https://book.cairo-lang.org/).*
+
 In the [first part]({% post_url 2023-04-03-storing-user-defined-types-pt-1 %}) of this series, we learnt how to implement `StorageAccess` for a custom data type so we can use it in contract storage. The struct itself was pretty simple, containing only primitive types. Now what if we want to store a more complex type, itself containing a custom struct?
 
 ```rust
